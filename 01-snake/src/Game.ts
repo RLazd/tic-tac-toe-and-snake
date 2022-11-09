@@ -28,6 +28,7 @@ export class Game {
   }
 
   update(time: number) {
+    
     this.nextTick = time + configuration.defaultSpeed;
 
     this.snake.move();
@@ -51,7 +52,6 @@ export class Game {
 
     // left the play area or ate itself??
     if (this.isOutside(cell) || this.snake.isTakenBySnake(cell)) {
-      // dead
       return -1;
     }
 
